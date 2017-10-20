@@ -1,4 +1,4 @@
-const {Menu, dialog} = require('electron').remote
+const { Menu, dialog } = require('electron').remote
 const fs = require('fs')
 
 const template = [
@@ -29,22 +29,21 @@ const template = [
         }
       },
       {
-        label:'new',
+        label: 'new',
         accelerator: 'CmdOrCtrl+N',
-        click(){
+        click() {
           let newwindow = new BrowserWindow
-          ({
-            width: 400, 
-                height: 300,
-            resizable:false
-          })
+            ({
+              width: 400,
+              height: 300,
+              resizable: false
+            })
           newwindow.loadURL('file://' + __dirname + '/source/electron1.jpg');
-          newwindow.on("closed",function()
-          {
+          newwindow.on("closed", function () {
             newwindow = null
           })
-            },
-          
+        }
+      },
       {
         label: 'Save',
         accelerator: 'CmdOrCtrl+S',
@@ -90,7 +89,7 @@ const template = [
   },
   {
     role: 'help',
-    submenu: [ { label: 'Learn More' } ]
+    submenu: [{ label: 'Learn More' }]
   }
 ]
 
