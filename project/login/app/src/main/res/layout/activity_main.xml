@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.textinputlayout.MainActivity">
+
+    <ImageView
+        android:id="@+id/image_tree"
+        android:layout_width="wrap_content"
+        android:layout_height="160sp"
+
+        android:layout_marginBottom="65dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/tree"
+        app:layout_constraintBottom_toTopOf="@+id/text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="304dp"
+        android:layout_height="72dp"
+        android:layout_below="@id/image_tree"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/welcome"
+        android:textColor="#000"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textinput1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_tree" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textinput1"
+        android:layout_width="319dp"
+        android:layout_height="61dp"
+        android:layout_below="@id/text"
+        android:layout_marginTop="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingRight"
+            android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+            android:textColorHint="#cfc8c8" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textinput2"
+        android:layout_width="320dp"
+        android:layout_height="75dp"
+        android:layout_below="@id/textinput1"
+        android:layout_marginEnd="31dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textinput1">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="#cfc8c8" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="328sp"
+        android:layout_height="52sp"
+        android:layout_below="@id/textinput2"
+        android:layout_marginBottom="19dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/button_background"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="log_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</android.support.constraint.ConstraintLayout>
